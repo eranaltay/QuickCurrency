@@ -1,0 +1,27 @@
+{
+  "name": "QuickCurrency",
+  "description": "",
+  "version": "1.0",
+  "content_scripts": [{
+    "js": ["jquery-1.10.2.min.js"],
+     "matches": ["*://*/*"]
+  }],
+
+  "permissions": ["http://rate-exchange.appspot.com/currency","notifications"],
+
+
+  "background": {
+    "scripts": ["jquery-1.10.2.min.js","background.js"]
+  },
+
+  "omnibox": { "keyword" : "currency" },
+        "icons": {
+          "16": "icon.png"
+        },
+
+  "web_accessible_resources": [
+    "icon.png"
+  ],
+
+  "manifest_version": 2
+}
