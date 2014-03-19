@@ -7,18 +7,13 @@ function callURL(source, fromAndTo)
   var splitedId = fromAndTo.toLowerCase().split("to");
 
     //call of callURL(...) came from 'update button' of create new currency rate
-    if(source == "create")
-    {
-        from = splitedId[0];
-        to = splitedId[1];
+    if(source == "update")
+    {        
+       splitedId.reverse();
     }
 
-    else
-    {           
-         splitedId.reverse();
-         from = splitedId[0];
-         to = splitedId[1];
-    } 
+    from = splitedId[0];
+    to = splitedId[1]; 
 
     console.log("func callURL(): " + from + " to " + to);
 
